@@ -10,9 +10,9 @@ describe('actions', () => {
       expect(action.type).to.equal(SAVE_COMENT);
     });
 
-    it('Has the correct playload', () => {
+    it('Has the correct payload', () => {
       const action = saveComment('new comment');
-      expect(action.playload).to.equal('new comment');
+      expect(action.payload).to.equal('new comment');
     });
 
   });
