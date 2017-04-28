@@ -2,11 +2,11 @@
 
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../actions';
+import * as actions from '../actions'; //all actions
 
 class UserList extends Component {
 
-componentWillMount() {
+componentWillMount() { //prikazuje korisnike, tako sto poziva fetchUsers
   this.props.fetchUsers();
 }
 
@@ -15,15 +15,15 @@ componentWillMount() {
   return(
     <div className="card card-block">
       <h4 className="card-title"> {user.name}</h4>
-      <p className="card-text">Fabrika Sira</p>
-      <a className="btn btn-primary">Email</a>
+      <p className="card-text">{user.company.name}</p>
+      <a className="btn btn-primary" href={user.website}>Website</a>
     </div>
   );
 }
 
   render() {
     return(
-      <div>
+      <div className="user-list">
         {this.props.users.map(this.renderUser)}
       </div>
     );

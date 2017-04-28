@@ -9,13 +9,14 @@ import requireAuth from './components/require_auth';
 import App from './components/app';
 import Resources from './components/resources';
 import reducers from './reducers';
+import Async from './middlewares/async';
 
 
 
 
 
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(Async)(createStore); //kada akcija dobije dispatch pobrini se da prodje kroz Async middleware
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>

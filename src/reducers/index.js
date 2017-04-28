@@ -1,6 +1,4 @@
-import {
-  combineReducers
-} from 'redux';
+import { combineReducers } from 'redux';
 import commentReducer from './comments';
 import authenticationReducer from './authentication';
 import usersReducer from './users';
@@ -11,6 +9,7 @@ const rootReducer = combineReducers({
 
   authentcated: authenticationReducer, // reducer za  authentication
 
-   users: usersReducer // reducer za  usersReducer
+  users: usersReducer // reducer za  usersReducer
+  
 });
 export default rootReducer;

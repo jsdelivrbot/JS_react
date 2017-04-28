@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-            <UserList />
+          <UserList />
           <CommentBox />
           <CommentList />
           {this.props.children}
